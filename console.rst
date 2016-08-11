@@ -60,6 +60,19 @@ method. Then you can optionally define a help message and the
             ->setHelp("This command allows you to create users...")
         ;
     }
+    
+Registerring the Command
+------------------------
+
+Now register the command in your bundle services yml config in AppBundle\Resources\config\services.yml.
+
+.. code-block: yml
+
+    app.command.create_user_command:
+        class: AppBundle\Command\CreateUserCommand
+        tags:
+            - { name: console.command }
+
 
 Executing the Command
 ---------------------
